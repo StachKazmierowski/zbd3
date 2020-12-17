@@ -14,7 +14,7 @@ CREATE FOREIGN TABLE podobny_slodycz_csv (
 	do_czego_slodycz_jest_podobny varchar,
 	podobienstwo real
 ) server csv
-OPTIONS( filename './data/sweets.csv', format 'csv');
+OPTIONS( filename './data/similarity.csv', format 'csv');
 CREATE TABLE podobny_slodycz AS select * from podobny_slodycz_csv;
 
 DROP TABLE paczka;
