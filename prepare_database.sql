@@ -3,7 +3,7 @@ CREATE FOREIGN TABLE slodycz_w_magazynie_csv (
 	nazwa varchar,
 	ilosc_pozostalych integer
 ) server csv
-OPTIONS( filename './data/sweets.csv', format 'csv');
+OPTIONS( filename '/home/stach/zbd3/data/sweets.csv', format 'csv');
 CREATE TABLE slodycz_w_magazynie AS select * from slodycz_w_magazynie_csv;
 ALTER TABLE slodycz_w_magazynie ADD CONSTRAINT sprawdz_liczbe_slodyczy
 	CHECK ( ilosc_pozostalych > 0);
@@ -14,7 +14,7 @@ CREATE FOREIGN TABLE podobny_slodycz_csv (
 	do_czego_slodycz_jest_podobny varchar,
 	podobienstwo real
 ) server csv
-OPTIONS( filename './data/similarity.csv', format 'csv');
+OPTIONS( filename '/home/stach/zbd3/data/similarity.csv', format 'csv');
 CREATE TABLE podobny_slodycz AS select * from podobny_slodycz_csv;
 
 DROP TABLE paczka;
