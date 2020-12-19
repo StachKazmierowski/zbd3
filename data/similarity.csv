@@ -1,45 +1,90 @@
-'Mieszanka studencka','Milka',0.37
-'Lindor','Milka',0.03
-'Lindor','Mieszanka studencka',0.14
-'Prince polo','Milka',0.34
-'Prince polo','Mieszanka studencka',0.58
-'Prince polo','Lindor',0.48
-'Delicje','Milka',0.28
-'Delicje','Mieszanka studencka',0.23
-'Delicje','Lindor',0.4
-'Delicje','Prince polo',0.1
-'Kinder niespodzianka','Milka',0.18
-'Kinder niespodzianka','Mieszanka studencka',0.39
-'Kinder niespodzianka','Lindor',0.28
-'Kinder niespodzianka','Prince polo',0.47
-'Kinder niespodzianka','Delicje',0.26
-'Jeżyki','Milka',0.62
-'Jeżyki','Mieszanka studencka',0.53
-'Jeżyki','Lindor',0.36
-'Jeżyki','Prince polo',0.15
-'Jeżyki','Delicje',0.26
-'Jeżyki','Kinder niespodzianka',0.85
-'Ferrero Rocher','Milka',0.44
-'Ferrero Rocher','Mieszanka studencka',0.88
-'Ferrero Rocher','Lindor',0.23
-'Ferrero Rocher','Prince polo',0.65
-'Ferrero Rocher','Delicje',0.25
-'Ferrero Rocher','Kinder niespodzianka',0.83
-'Ferrero Rocher','Jeżyki',0.85
-'Merci','Milka',1.0
-'Merci','Mieszanka studencka',0.04
-'Merci','Lindor',0.85
-'Merci','Prince polo',0.33
-'Merci','Delicje',0.87
-'Merci','Kinder niespodzianka',0.69
-'Merci','Jeżyki',0.51
-'Merci','Ferrero Rocher',0.02
-'Raphaello','Milka',0.11
-'Raphaello','Mieszanka studencka',0.65
-'Raphaello','Lindor',0.33
-'Raphaello','Prince polo',0.22
-'Raphaello','Delicje',0.85
-'Raphaello','Kinder niespodzianka',0.57
-'Raphaello','Jeżyki',0.36
-'Raphaello','Ferrero Rocher',0.63
-'Raphaello','Merci',0.74
+Milka,Mieszanka studencka,0.34
+Milka,Lindor,0.56
+Milka,Prince polo,0.5
+Milka,Delicje,0.7
+Milka,Kinder niespodzianka,0.82
+Milka,Jeżyki,0.9
+Milka,Ferrero Rocher,0.75
+Milka,Merci,0.76
+Milka,Raphaello,0.16
+Mieszanka studencka,Milka,0.34
+Mieszanka studencka,Lindor,0.62
+Mieszanka studencka,Prince polo,0.47
+Mieszanka studencka,Delicje,1.0
+Mieszanka studencka,Kinder niespodzianka,0.29
+Mieszanka studencka,Jeżyki,0.0
+Mieszanka studencka,Ferrero Rocher,0.48
+Mieszanka studencka,Merci,0.33
+Mieszanka studencka,Raphaello,1.0
+Lindor,Milka,0.56
+Lindor,Mieszanka studencka,0.62
+Lindor,Prince polo,0.46
+Lindor,Delicje,0.37
+Lindor,Kinder niespodzianka,0.94
+Lindor,Jeżyki,0.25
+Lindor,Ferrero Rocher,0.89
+Lindor,Merci,0.32
+Lindor,Raphaello,0.95
+Prince polo,Milka,0.5
+Prince polo,Mieszanka studencka,0.47
+Prince polo,Lindor,0.46
+Prince polo,Delicje,0.39
+Prince polo,Kinder niespodzianka,0.85
+Prince polo,Jeżyki,0.28
+Prince polo,Ferrero Rocher,0.66
+Prince polo,Merci,0.22
+Prince polo,Raphaello,0.52
+Delicje,Milka,0.7
+Delicje,Mieszanka studencka,1.0
+Delicje,Lindor,0.37
+Delicje,Prince polo,0.39
+Delicje,Kinder niespodzianka,0.08
+Delicje,Jeżyki,0.27
+Delicje,Ferrero Rocher,0.19
+Delicje,Merci,0.17
+Delicje,Raphaello,0.86
+Kinder niespodzianka,Milka,0.82
+Kinder niespodzianka,Mieszanka studencka,0.29
+Kinder niespodzianka,Lindor,0.94
+Kinder niespodzianka,Prince polo,0.85
+Kinder niespodzianka,Delicje,0.08
+Kinder niespodzianka,Jeżyki,0.68
+Kinder niespodzianka,Ferrero Rocher,0.11
+Kinder niespodzianka,Merci,0.06
+Kinder niespodzianka,Raphaello,0.56
+Jeżyki,Milka,0.9
+Jeżyki,Mieszanka studencka,0.0
+Jeżyki,Lindor,0.25
+Jeżyki,Prince polo,0.28
+Jeżyki,Delicje,0.27
+Jeżyki,Kinder niespodzianka,0.68
+Jeżyki,Ferrero Rocher,0.39
+Jeżyki,Merci,0.54
+Jeżyki,Raphaello,0.61
+Ferrero Rocher,Milka,0.75
+Ferrero Rocher,Mieszanka studencka,0.48
+Ferrero Rocher,Lindor,0.89
+Ferrero Rocher,Prince polo,0.66
+Ferrero Rocher,Delicje,0.19
+Ferrero Rocher,Kinder niespodzianka,0.11
+Ferrero Rocher,Jeżyki,0.39
+Ferrero Rocher,Merci,0.19
+Ferrero Rocher,Raphaello,0.62
+Merci,Milka,0.76
+Merci,Mieszanka studencka,0.33
+Merci,Lindor,0.32
+Merci,Prince polo,0.22
+Merci,Delicje,0.17
+Merci,Kinder niespodzianka,0.06
+Merci,Jeżyki,0.54
+Merci,Ferrero Rocher,0.19
+Merci,Raphaello,0.25
+Raphaello,Milka,0.16
+Raphaello,Mieszanka studencka,1.0
+Raphaello,Lindor,0.95
+Raphaello,Prince polo,0.52
+Raphaello,Delicje,0.86
+Raphaello,Kinder niespodzianka,0.56
+Raphaello,Jeżyki,0.61
+Raphaello,Ferrero Rocher,0.62
+Raphaello,Merci,0.25
