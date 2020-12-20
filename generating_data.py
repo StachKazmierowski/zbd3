@@ -1,12 +1,16 @@
 import numpy as np
 import pandas as pd
-MEAN = 1000
-VAR = 150
-LOW = 500
-HIGH = 1500
+import random
+ELFS_NUMBER = 20
+PACZKI_PER_ELF = 20
+LOW = 60
+HIGH = 100
+
 
 SWEETS = ['Milka', 'Mieszanka studencka', 'Lindor', 'Prince polo', 'Delicje', 'Kinder niespodzianka'
     , 'Jeżyki', 'Ferrero Rocher', 'Merci', 'Raphaello']
+DESCRITPIONS = ['mały', 'duży', 'mądry', 'głupi']
+COUNTRIES = ['Polska', 'Japonia', 'Tadżykistan', 'Kolumbia', 'USA']
 
 def gen_similarity(SWEETS):
     sweets_size = len(SWEETS)
@@ -29,6 +33,13 @@ def gen_sweets(SWEETS):
     df.to_csv('./data/sweets.csv', index=False, header=False)
     # print(df)
 
+def gen_paczki(SWEETS):
+    data = pd.DataFrame()
+    for i in range(ELFS_NUMBER*PACZKI_PER_ELF):
+        data = data.append(pd.DataFrame([[i, random.choice(COUNTRIES), random.choice(DESCRITPIONS), SWEETS[int(i % len(SWEETS))], int(HIGH/len(SWEETS) + random.uniform(-2, 3))]]))
+    data.to_csv('./data/paczki.csv', index=False, header=False)
+
 
 print(gen_similarity(SWEETS))
 gen_sweets(SWEETS)
+gen_paczki(SWEETS)

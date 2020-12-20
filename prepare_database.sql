@@ -32,3 +32,17 @@ CREATE TABLE slodycz_w_paczce (
 	slodycz varchar,
 	ilosc integer
 );
+
+
+
+DROP FOREIGN TABLE paczka_pomocnicza_csv;
+CREATE FOREIGN TABLE paczka_pomocnicza_csv (
+	id integer,
+	kraj varchar,
+	opis_obdarowanego varchar,
+	slodycz varchar,
+	ilosc integer
+) server csv
+OPTIONS( filename '/home/stach/ZBD/zbd3/data/paczki.csv', format 'csv');
+DROP TABLE paczka_pomocnicza;
+CREATE TABLE paczka_pomocnicza AS select * from paczka_pomocnicza_csv;
