@@ -1,0 +1,400 @@
+0,Japonia,głupi,Milka,1
+1,Polska,mały,Mieszanka studencka,1
+2,Japonia,mały,Lindor,1
+3,Japonia,mądry,Prince polo,2
+4,Tadżykistan,duży,Delicje,2
+5,Tadżykistan,duży,Kinder niespodzianka,3
+6,Polska,mały,Jeżyki,2
+7,Polska,mały,Ferrero Rocher,2
+8,Kolumbia,mały,Merci,3
+9,Polska,mądry,Raphaello,2
+10,Japonia,duży,Milka,0
+11,USA,mały,Mieszanka studencka,2
+12,USA,duży,Lindor,1
+13,Polska,mądry,Prince polo,2
+14,Japonia,głupi,Delicje,1
+15,Japonia,mały,Kinder niespodzianka,2
+16,USA,mądry,Jeżyki,3
+17,Tadżykistan,głupi,Ferrero Rocher,2
+18,Kolumbia,mądry,Merci,2
+19,Tadżykistan,mały,Raphaello,3
+20,USA,duży,Milka,0
+21,USA,duży,Mieszanka studencka,1
+22,USA,mądry,Lindor,1
+23,Tadżykistan,duży,Prince polo,0
+24,Japonia,mądry,Delicje,2
+25,Japonia,duży,Kinder niespodzianka,2
+26,Tadżykistan,duży,Jeżyki,2
+27,Tadżykistan,mądry,Ferrero Rocher,2
+28,Kolumbia,mądry,Merci,3
+29,Tadżykistan,głupi,Raphaello,2
+30,USA,mały,Milka,0
+31,USA,mądry,Mieszanka studencka,0
+32,Kolumbia,duży,Lindor,1
+33,Kolumbia,mały,Prince polo,0
+34,Kolumbia,głupi,Delicje,2
+35,USA,mały,Kinder niespodzianka,2
+36,Japonia,mądry,Jeżyki,2
+37,Tadżykistan,mały,Ferrero Rocher,2
+38,Kolumbia,mały,Merci,5
+39,Kolumbia,głupi,Raphaello,3
+40,Japonia,mały,Milka,0
+41,Tadżykistan,mądry,Mieszanka studencka,0
+42,Tadżykistan,mały,Lindor,1
+43,Tadżykistan,głupi,Prince polo,2
+44,Polska,mały,Delicje,3
+45,USA,mały,Kinder niespodzianka,2
+46,Kolumbia,głupi,Jeżyki,2
+47,Kolumbia,duży,Ferrero Rocher,1
+48,Kolumbia,głupi,Merci,4
+49,Polska,mały,Raphaello,5
+50,Japonia,duży,Milka,0
+51,Polska,mądry,Mieszanka studencka,1
+52,USA,duży,Lindor,2
+53,Polska,mądry,Prince polo,2
+54,USA,mały,Delicje,2
+55,Kolumbia,głupi,Kinder niespodzianka,3
+56,USA,duży,Jeżyki,2
+57,USA,mądry,Ferrero Rocher,3
+58,USA,głupi,Merci,2
+59,Kolumbia,głupi,Raphaello,5
+60,Kolumbia,duży,Milka,0
+61,Polska,duży,Mieszanka studencka,2
+62,Tadżykistan,duży,Lindor,2
+63,Japonia,mały,Prince polo,2
+64,Kolumbia,mądry,Delicje,1
+65,Polska,mały,Kinder niespodzianka,3
+66,Tadżykistan,głupi,Jeżyki,1
+67,Polska,mądry,Ferrero Rocher,2
+68,Japonia,mały,Merci,4
+69,Kolumbia,mądry,Raphaello,4
+70,Polska,duży,Milka,0
+71,Japonia,głupi,Mieszanka studencka,0
+72,Kolumbia,duży,Lindor,0
+73,Tadżykistan,mądry,Prince polo,2
+74,USA,głupi,Delicje,2
+75,Tadżykistan,głupi,Kinder niespodzianka,3
+76,Japonia,duży,Jeżyki,1
+77,Polska,mały,Ferrero Rocher,4
+78,Polska,głupi,Merci,4
+79,Japonia,duży,Raphaello,3
+80,Polska,mały,Milka,1
+81,Japonia,głupi,Mieszanka studencka,2
+82,Tadżykistan,mały,Lindor,1
+83,Japonia,duży,Prince polo,1
+84,Tadżykistan,głupi,Delicje,3
+85,Japonia,duży,Kinder niespodzianka,3
+86,Kolumbia,mały,Jeżyki,1
+87,Polska,mądry,Ferrero Rocher,2
+88,Kolumbia,mały,Merci,5
+89,USA,głupi,Raphaello,5
+90,Japonia,głupi,Milka,0
+91,USA,duży,Mieszanka studencka,2
+92,USA,mądry,Lindor,1
+93,USA,mądry,Prince polo,2
+94,USA,mądry,Delicje,2
+95,Japonia,mądry,Kinder niespodzianka,3
+96,Tadżykistan,duży,Jeżyki,3
+97,Japonia,mały,Ferrero Rocher,2
+98,Polska,mądry,Merci,4
+99,Japonia,mądry,Raphaello,5
+100,Tadżykistan,duży,Milka,1
+101,Japonia,mądry,Mieszanka studencka,1
+102,Tadżykistan,głupi,Lindor,0
+103,Kolumbia,głupi,Prince polo,2
+104,USA,mały,Delicje,2
+105,Polska,mądry,Kinder niespodzianka,1
+106,Kolumbia,mądry,Jeżyki,3
+107,Polska,mały,Ferrero Rocher,4
+108,Polska,duży,Merci,3
+109,Kolumbia,mądry,Raphaello,3
+110,USA,głupi,Milka,0
+111,USA,mądry,Mieszanka studencka,1
+112,USA,mały,Lindor,2
+113,USA,mały,Prince polo,1
+114,Tadżykistan,mały,Delicje,3
+115,Polska,głupi,Kinder niespodzianka,3
+116,Japonia,głupi,Jeżyki,4
+117,Japonia,głupi,Ferrero Rocher,2
+118,Tadżykistan,mały,Merci,4
+119,Tadżykistan,mały,Raphaello,3
+120,Kolumbia,głupi,Milka,0
+121,Japonia,mądry,Mieszanka studencka,2
+122,Kolumbia,duży,Lindor,2
+123,Japonia,mały,Prince polo,0
+124,Polska,głupi,Delicje,3
+125,Kolumbia,głupi,Kinder niespodzianka,3
+126,Polska,mały,Jeżyki,2
+127,Kolumbia,duży,Ferrero Rocher,2
+128,Kolumbia,mały,Merci,2
+129,Polska,mały,Raphaello,3
+130,Japonia,mały,Milka,0
+131,Polska,mądry,Mieszanka studencka,2
+132,Polska,duży,Lindor,1
+133,Kolumbia,głupi,Prince polo,1
+134,Kolumbia,mądry,Delicje,3
+135,Tadżykistan,głupi,Kinder niespodzianka,1
+136,Kolumbia,duży,Jeżyki,2
+137,Tadżykistan,głupi,Ferrero Rocher,2
+138,Polska,mały,Merci,3
+139,USA,duży,Raphaello,4
+140,USA,mądry,Milka,0
+141,Tadżykistan,głupi,Mieszanka studencka,0
+142,USA,duży,Lindor,1
+143,Kolumbia,głupi,Prince polo,0
+144,Tadżykistan,głupi,Delicje,2
+145,Japonia,mądry,Kinder niespodzianka,1
+146,Tadżykistan,głupi,Jeżyki,4
+147,Japonia,mądry,Ferrero Rocher,1
+148,Kolumbia,duży,Merci,4
+149,Polska,mały,Raphaello,3
+150,Polska,mały,Milka,0
+151,Japonia,mały,Mieszanka studencka,0
+152,Kolumbia,mądry,Lindor,1
+153,USA,duży,Prince polo,2
+154,Kolumbia,duży,Delicje,2
+155,Kolumbia,mały,Kinder niespodzianka,3
+156,Polska,mały,Jeżyki,2
+157,Polska,mały,Ferrero Rocher,4
+158,Japonia,głupi,Merci,3
+159,Japonia,mądry,Raphaello,3
+160,USA,mały,Milka,1
+161,Polska,mądry,Mieszanka studencka,2
+162,Japonia,duży,Lindor,1
+163,USA,głupi,Prince polo,1
+164,Tadżykistan,duży,Delicje,2
+165,Polska,mały,Kinder niespodzianka,1
+166,Kolumbia,mały,Jeżyki,2
+167,USA,mały,Ferrero Rocher,3
+168,Japonia,mały,Merci,2
+169,USA,głupi,Raphaello,4
+170,Tadżykistan,duży,Milka,0
+171,Japonia,głupi,Mieszanka studencka,0
+172,Japonia,mały,Lindor,1
+173,Tadżykistan,mądry,Prince polo,3
+174,Polska,duży,Delicje,2
+175,USA,mądry,Kinder niespodzianka,1
+176,Polska,mądry,Jeżyki,1
+177,Kolumbia,mały,Ferrero Rocher,3
+178,Polska,mądry,Merci,3
+179,Tadżykistan,głupi,Raphaello,2
+180,Tadżykistan,duży,Milka,1
+181,Polska,mały,Mieszanka studencka,0
+182,Polska,mądry,Lindor,1
+183,Japonia,głupi,Prince polo,3
+184,USA,mały,Delicje,2
+185,USA,mały,Kinder niespodzianka,1
+186,Kolumbia,głupi,Jeżyki,2
+187,Kolumbia,duży,Ferrero Rocher,4
+188,USA,duży,Merci,2
+189,Polska,mądry,Raphaello,5
+190,Tadżykistan,mały,Milka,1
+191,USA,duży,Mieszanka studencka,0
+192,Japonia,głupi,Lindor,2
+193,USA,duży,Prince polo,2
+194,Japonia,mądry,Delicje,2
+195,Polska,mały,Kinder niespodzianka,3
+196,Tadżykistan,mały,Jeżyki,3
+197,Polska,mały,Ferrero Rocher,2
+198,Polska,głupi,Merci,3
+199,USA,głupi,Raphaello,4
+200,Tadżykistan,duży,Milka,0
+201,Polska,duży,Mieszanka studencka,0
+202,Kolumbia,duży,Lindor,0
+203,Polska,mądry,Prince polo,1
+204,Tadżykistan,mądry,Delicje,3
+205,Japonia,mądry,Kinder niespodzianka,2
+206,USA,głupi,Jeżyki,3
+207,Polska,mały,Ferrero Rocher,3
+208,Polska,mądry,Merci,2
+209,Polska,mały,Raphaello,4
+210,Japonia,mądry,Milka,0
+211,Kolumbia,mały,Mieszanka studencka,0
+212,Tadżykistan,głupi,Lindor,2
+213,Polska,duży,Prince polo,1
+214,Kolumbia,głupi,Delicje,1
+215,Japonia,mały,Kinder niespodzianka,2
+216,Japonia,duży,Jeżyki,3
+217,Tadżykistan,mały,Ferrero Rocher,4
+218,Japonia,głupi,Merci,4
+219,Tadżykistan,duży,Raphaello,2
+220,Polska,mądry,Milka,1
+221,Tadżykistan,mały,Mieszanka studencka,0
+222,Tadżykistan,mały,Lindor,1
+223,Japonia,mały,Prince polo,0
+224,Kolumbia,głupi,Delicje,1
+225,Japonia,duży,Kinder niespodzianka,3
+226,Tadżykistan,duży,Jeżyki,1
+227,Kolumbia,duży,Ferrero Rocher,4
+228,Polska,głupi,Merci,2
+229,Japonia,mądry,Raphaello,4
+230,USA,głupi,Milka,0
+231,USA,mały,Mieszanka studencka,2
+232,Polska,głupi,Lindor,1
+233,Japonia,duży,Prince polo,1
+234,USA,mądry,Delicje,2
+235,Tadżykistan,mały,Kinder niespodzianka,2
+236,Polska,duży,Jeżyki,4
+237,Tadżykistan,mądry,Ferrero Rocher,1
+238,Polska,mądry,Merci,3
+239,Polska,mały,Raphaello,3
+240,Japonia,mądry,Milka,1
+241,Polska,mały,Mieszanka studencka,0
+242,Tadżykistan,duży,Lindor,0
+243,Polska,mądry,Prince polo,2
+244,Japonia,duży,Delicje,1
+245,Tadżykistan,duży,Kinder niespodzianka,1
+246,Polska,głupi,Jeżyki,4
+247,Tadżykistan,głupi,Ferrero Rocher,4
+248,USA,mądry,Merci,4
+249,Tadżykistan,głupi,Raphaello,5
+250,Polska,głupi,Milka,0
+251,USA,głupi,Mieszanka studencka,1
+252,Tadżykistan,głupi,Lindor,0
+253,Kolumbia,głupi,Prince polo,2
+254,Japonia,głupi,Delicje,1
+255,Polska,głupi,Kinder niespodzianka,3
+256,USA,mądry,Jeżyki,3
+257,Tadżykistan,mały,Ferrero Rocher,3
+258,Tadżykistan,mały,Merci,2
+259,Tadżykistan,mądry,Raphaello,4
+260,Kolumbia,mały,Milka,0
+261,Japonia,głupi,Mieszanka studencka,1
+262,Polska,głupi,Lindor,0
+263,USA,mały,Prince polo,0
+264,Kolumbia,mały,Delicje,2
+265,Kolumbia,duży,Kinder niespodzianka,3
+266,Tadżykistan,mądry,Jeżyki,3
+267,Tadżykistan,głupi,Ferrero Rocher,4
+268,Kolumbia,mądry,Merci,2
+269,Tadżykistan,mądry,Raphaello,5
+270,Kolumbia,głupi,Milka,0
+271,Polska,duży,Mieszanka studencka,2
+272,Polska,głupi,Lindor,1
+273,Japonia,mądry,Prince polo,0
+274,USA,głupi,Delicje,2
+275,Kolumbia,duży,Kinder niespodzianka,1
+276,Kolumbia,głupi,Jeżyki,1
+277,Polska,duży,Ferrero Rocher,1
+278,Polska,głupi,Merci,2
+279,Kolumbia,duży,Raphaello,5
+280,Kolumbia,mały,Milka,1
+281,Polska,mądry,Mieszanka studencka,0
+282,Kolumbia,mądry,Lindor,1
+283,Polska,mały,Prince polo,2
+284,Kolumbia,głupi,Delicje,1
+285,USA,głupi,Kinder niespodzianka,1
+286,USA,głupi,Jeżyki,2
+287,Tadżykistan,duży,Ferrero Rocher,1
+288,Japonia,duży,Merci,2
+289,USA,głupi,Raphaello,4
+290,Tadżykistan,mądry,Milka,0
+291,Tadżykistan,mądry,Mieszanka studencka,2
+292,Polska,duży,Lindor,2
+293,Polska,duży,Prince polo,2
+294,Kolumbia,mały,Delicje,1
+295,Japonia,mądry,Kinder niespodzianka,3
+296,Japonia,duży,Jeżyki,3
+297,Polska,głupi,Ferrero Rocher,2
+298,USA,mądry,Merci,4
+299,Kolumbia,głupi,Raphaello,3
+300,Kolumbia,mały,Milka,0
+301,Polska,mądry,Mieszanka studencka,2
+302,Japonia,głupi,Lindor,2
+303,Kolumbia,mały,Prince polo,0
+304,Tadżykistan,głupi,Delicje,1
+305,Polska,duży,Kinder niespodzianka,1
+306,USA,duży,Jeżyki,1
+307,Kolumbia,głupi,Ferrero Rocher,4
+308,Kolumbia,duży,Merci,2
+309,Tadżykistan,mądry,Raphaello,4
+310,USA,duży,Milka,0
+311,Kolumbia,mądry,Mieszanka studencka,1
+312,Kolumbia,mały,Lindor,2
+313,Kolumbia,mały,Prince polo,2
+314,Kolumbia,mądry,Delicje,1
+315,Kolumbia,głupi,Kinder niespodzianka,2
+316,Polska,duży,Jeżyki,3
+317,Tadżykistan,mądry,Ferrero Rocher,4
+318,Tadżykistan,mądry,Merci,2
+319,Tadżykistan,duży,Raphaello,5
+320,Polska,mądry,Milka,0
+321,Tadżykistan,mądry,Mieszanka studencka,2
+322,Kolumbia,duży,Lindor,0
+323,Kolumbia,mały,Prince polo,2
+324,Tadżykistan,mądry,Delicje,0
+325,Polska,głupi,Kinder niespodzianka,2
+326,Kolumbia,mądry,Jeżyki,2
+327,USA,mądry,Ferrero Rocher,4
+328,Kolumbia,mały,Merci,3
+329,Polska,mądry,Raphaello,4
+330,Tadżykistan,mądry,Milka,1
+331,Polska,duży,Mieszanka studencka,1
+332,USA,duży,Lindor,1
+333,Japonia,duży,Prince polo,1
+334,Tadżykistan,głupi,Delicje,0
+335,Japonia,mądry,Kinder niespodzianka,1
+336,USA,mały,Jeżyki,3
+337,Polska,duży,Ferrero Rocher,3
+338,USA,duży,Merci,2
+339,Kolumbia,głupi,Raphaello,3
+340,Japonia,duży,Milka,0
+341,Polska,głupi,Mieszanka studencka,0
+342,Polska,mały,Lindor,1
+343,USA,mały,Prince polo,2
+344,USA,mały,Delicje,1
+345,Japonia,mały,Kinder niespodzianka,3
+346,Tadżykistan,duży,Jeżyki,1
+347,Polska,głupi,Ferrero Rocher,2
+348,Japonia,duży,Merci,4
+349,Polska,duży,Raphaello,5
+350,USA,mądry,Milka,0
+351,Tadżykistan,mądry,Mieszanka studencka,0
+352,Tadżykistan,głupi,Lindor,1
+353,Polska,duży,Prince polo,1
+354,Polska,głupi,Delicje,1
+355,USA,mądry,Kinder niespodzianka,2
+356,USA,mądry,Jeżyki,2
+357,Tadżykistan,głupi,Ferrero Rocher,1
+358,USA,głupi,Merci,3
+359,USA,głupi,Raphaello,3
+360,Kolumbia,mądry,Milka,0
+361,Tadżykistan,głupi,Mieszanka studencka,0
+362,Kolumbia,duży,Lindor,2
+363,Tadżykistan,duży,Prince polo,2
+364,Tadżykistan,mądry,Delicje,1
+365,Kolumbia,mądry,Kinder niespodzianka,1
+366,Kolumbia,mały,Jeżyki,2
+367,Polska,mądry,Ferrero Rocher,2
+368,Tadżykistan,mały,Merci,2
+369,USA,duży,Raphaello,3
+370,Kolumbia,duży,Milka,0
+371,Polska,duży,Mieszanka studencka,0
+372,Kolumbia,mądry,Lindor,0
+373,Tadżykistan,głupi,Prince polo,1
+374,Kolumbia,duży,Delicje,2
+375,Kolumbia,mały,Kinder niespodzianka,1
+376,USA,mały,Jeżyki,3
+377,Japonia,mały,Ferrero Rocher,3
+378,Polska,mały,Merci,2
+379,USA,głupi,Raphaello,5
+380,Polska,mądry,Milka,0
+381,Polska,duży,Mieszanka studencka,0
+382,USA,mądry,Lindor,2
+383,Kolumbia,duży,Prince polo,1
+384,Japonia,mądry,Delicje,2
+385,Japonia,duży,Kinder niespodzianka,3
+386,Tadżykistan,głupi,Jeżyki,3
+387,Polska,duży,Ferrero Rocher,2
+388,Kolumbia,duży,Merci,3
+389,USA,mały,Raphaello,5
+390,Kolumbia,mały,Milka,0
+391,Kolumbia,głupi,Mieszanka studencka,1
+392,USA,mały,Lindor,0
+393,Tadżykistan,głupi,Prince polo,2
+394,Kolumbia,głupi,Delicje,2
+395,Tadżykistan,mały,Kinder niespodzianka,2
+396,Kolumbia,głupi,Jeżyki,1
+397,Kolumbia,mądry,Ferrero Rocher,3
+398,Tadżykistan,duży,Merci,2
+399,USA,mały,Raphaello,4

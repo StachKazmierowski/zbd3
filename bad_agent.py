@@ -1,9 +1,12 @@
 import psycopg2
 from psycopg2 import Error
+from psycopg2 import extensions
 import random
 import time
+from main import get_paczka
+# from time_tracker import still_running
 
-def singe_run():
+def single_run():
     try:
         # Connect to an existing database
         connection = psycopg2.connect(user="stach",
@@ -12,38 +15,34 @@ def singe_run():
                                       port="5432",
                                       database="stach")
         # Create a cursor to perform database operations
+        paczka_pomocnicza_id, kraj, opis, slodycz, liczba = get_paczka()
+        print('Paczka numer ' ,paczka_pomocnicza_id)
+        print(paczka_pomocnicza_id, kraj, opis, slodycz, liczba)
+        connection.set_isolation_level(extensions.ISOLATION_LEVEL_AUTOCOMMIT)
         cursor = connection.cursor()
-        # Print PostgreSQL details
-        print("PostgreSQL server information")
-        print(connection.get_dsn_parameters(), "\n")
-        # Executing a SQL query
-        cursor.execute("SELECT * FROM paczka_pomocnicza limit 1;")
-        # Fetch result
-        record = cursor.fetchone()
-        print(record)
-        paczka_pomocnicza_id = record[0]
-        kraj = record[1]
-        opis = record[2]
-        slodycz = record[3]
-        liczba = record[4]
-        remove_from_tmp_paczka(paczka_pomocnicza_id, cursor)
-        connection.commit()
 
-        cursor.execute("BEGIN;")
-        time.sleep(0.1)
+
         SQL = "INSERT into paczka(kraj, opis_obdarowanego) values (%s, %s) RETURNING id;"
-        data = (record[1], record[2])
+        data = (kraj, opis)
         cursor.execute(SQL, data)
         paczka_id = cursor.fetchone()[0]
 
-        if(not check_if_is_enough(slodycz, liczba, cursor)):
+        print('pozostało ', check_amount(slodycz, cursor))
+        if(check_amount(slodycz, cursor) < liczba):
+            print('zmieniamy słodycz')
+            print(slodycz)
             slodycz = ask_for_similar(slodycz, cursor)
-        if(not check_if_is_enough(slodycz, liczba, cursor)):
-            cursor.execute("ROLLBACK;")
+            print(slodycz)
+
+        if(check_amount(slodycz, cursor) < liczba):
+            print('cofamy transakcje')
+            connection.rollback()
         else:
+            print('komitujemy transkcje')
             insert_into_paczka(slodycz, liczba, paczka_id, cursor)
+            time.sleep(1)
             update_slodycz_w_magazynie(slodycz, liczba, cursor)
-            cursor.execute("COMMIT;")
+            connection.commit()
 
     except (Exception, Error) as error:
         print("Error ", error)
@@ -74,16 +73,60 @@ def insert_into_paczka(name, amount, package_id, cursor):
     data = (package_id, name, amount)
     cursor.execute(SQL, data)
 
-def check_if_is_enough(name, amount, cursor):
+def check_amount(name, cursor):
     SQL = "SELECT ilosc_pozostalych FROM slodycz_w_magazynie WHERE nazwa=%s;"
     data = (name, )
     cursor.execute(SQL, data)
-    return (amount < cursor.fetchone()[0])
+    record = cursor.fetchone()
+    return record[0]
 
+def still_running():
+    try:
+        # Connect to an existing database
+        connection = psycopg2.connect(user="stach",
+                                      password="pol0pol9",
+                                      host="localhost",
+                                      port="5432",
+                                      database="stach")
+        # Create a cursor to perform database operations
+        cursor = connection.cursor()
+        # Print PostgreSQL details
+        print("PostgreSQL server information")
+        print(connection.get_dsn_parameters(), "\n")
+
+
+        SQL = "SELECT sum(ilosc_pozostalych) FROM slodycz_w_magazynie;"
+        cursor.execute(SQL)
+        if(cursor.fetchone()[0] < 1):
+            return False
+
+        SQL = "SELECT count(*) FROM paczka_pomocnicza;"
+        cursor.execute(SQL)
+        if (cursor.fetchone()[0] < 1):
+            return False
+        return True
+    except (Exception, Error) as error:
+        print("Error ", error)
+    finally:
+        if (connection):
+            cursor.close()
+            connection.close()
+            print("PostgreSQL connection is closed")
+#
 def run():
-    for i in range(100):
-        singe_run()
-        # time.sleep(2)
+    while(still_running()):
+        # print(check_paczka())
+        single_run()
+        time.sleep(0.1)
+
+
 
 run()
+# single_run()
+# print(get_paczka())
+
+
+
+
+
 

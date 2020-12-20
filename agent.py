@@ -3,8 +3,10 @@ from psycopg2 import Error
 from psycopg2 import extensions
 import random
 import time
+from main import get_paczka
+# from time_tracker import still_running
 
-def singe_run():
+def single_run():
     try:
         # Connect to an existing database
         connection = psycopg2.connect(user="stach",
@@ -13,23 +15,12 @@ def singe_run():
                                       port="5432",
                                       database="stach")
         # Create a cursor to perform database operations
-        connection.set_isolation_level(extensions.ISOLATION_LEVEL_SERIALIZABLE)
-        cursor = connection.cursor()
-        # Print PostgreSQL details
-        # Executing a SQL query
-        cursor.execute("SELECT * FROM paczka_pomocnicza limit 1;")
-        # Fetch result
-        record = cursor.fetchone()
-        paczka_pomocnicza_id = record[0]
-        kraj = record[1]
-        opis = record[2]
-        slodycz = record[3]
-        liczba = record[4]
-        remove_from_tmp_paczka(paczka_pomocnicza_id, cursor)
-        connection.commit()
-        connection.set_isolation_level(extensions.ISOLATION_LEVEL_DEFAULT)
+        paczka_pomocnicza_id, kraj, opis, slodycz, liczba = get_paczka()
         print('Paczka numer ' ,paczka_pomocnicza_id)
-        print(record)
+        print(paczka_pomocnicza_id, kraj, opis, slodycz, liczba)
+        connection.set_isolation_level(extensions.ISOLATION_LEVEL_AUTOCOMMIT)
+        cursor = connection.cursor()
+
 
         SQL = "INSERT into paczka(kraj, opis_obdarowanego) values (%s, %s) RETURNING id;"
         data = (kraj, opis)
@@ -44,14 +35,13 @@ def singe_run():
             print(slodycz)
 
         if(check_amount(slodycz, cursor) < liczba):
-            print('cofamy tranzakcje')
+            print('cofamy transakcje')
             connection.rollback()
         else:
-            print('komitujemy tranzakcje')
+            print('komitujemy transkcje')
             insert_into_paczka(slodycz, liczba, paczka_id, cursor)
             update_slodycz_w_magazynie(slodycz, liczba, cursor)
             connection.commit()
-
 
     except (Exception, Error) as error:
         print("Error ", error)
@@ -89,13 +79,53 @@ def check_amount(name, cursor):
     record = cursor.fetchone()
     return record[0]
 
+def still_running():
+    try:
+        # Connect to an existing database
+        connection = psycopg2.connect(user="stach",
+                                      password="pol0pol9",
+                                      host="localhost",
+                                      port="5432",
+                                      database="stach")
+        # Create a cursor to perform database operations
+        cursor = connection.cursor()
+        # Print PostgreSQL details
+        print("PostgreSQL server information")
+        print(connection.get_dsn_parameters(), "\n")
+
+
+        SQL = "SELECT sum(ilosc_pozostalych) FROM slodycz_w_magazynie;"
+        cursor.execute(SQL)
+        if(cursor.fetchone()[0] < 1):
+            return False
+
+        SQL = "SELECT count(*) FROM paczka_pomocnicza;"
+        cursor.execute(SQL)
+        if (cursor.fetchone()[0] < 1):
+            return False
+        return True
+    except (Exception, Error) as error:
+        print("Error ", error)
+    finally:
+        if (connection):
+            cursor.close()
+            connection.close()
+            print("PostgreSQL connection is closed")
+#
 def run():
-    # while(True):
-    for i in range(400):
-        singe_run()
+    while(still_running()):
+        # print(check_paczka())
+        single_run()
         time.sleep(0.1)
 
+
+
 run()
+# single_run()
+# print(get_paczka())
+
+
+
 
 
 

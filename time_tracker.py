@@ -29,7 +29,7 @@ def check_paczka():
             connection.close()
             print("PostgreSQL connection is closed")
 
-def singe_run():
+def still_running():
     try:
         # Connect to an existing database
         connection = psycopg2.connect(user="stach",
@@ -65,7 +65,7 @@ def singe_run():
 def run():
     f = open("results", 'a')
     start = time.time()
-    while(singe_run()):
+    while(still_running()):
         time.sleep(0.5)
     end = time.time()
     print(end-start)
@@ -73,4 +73,5 @@ def run():
     f.write('udane paczki: ' + str(check_paczka()) + '\n')
     f.close()
 
+# print(check_paczka())
 run()

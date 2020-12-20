@@ -1,0 +1,23 @@
+BEGIN;
+ -- tworzymy paczkę
+INSERT INTO paczka(kraj, opis_obdarowanego) values ('Niemcy', 'Krzysztof Ciebiera') RETURNING id;
+
+> 1 -- identyfikator paczki
+-- sprawdzamy czy w magazynie jest wystarczająco dużo słodyczy z pierwszej pozycji na liście(Czekolada Studencka * 2)
+SELECT ilosc_pozostalych FROM slodycz_w_magazynie WHERE nazwa = 'Milka';
+ > 1233
+-- nie ma dwóch czekolad, więc sprawdzamy do czego jest podobna czekolada studencka
+SELECT .... FROM podobny_slodycz...
+                    SELECT ktory_slodycz_jest_podobny FROM podobny_slodycz where do_czego_slodycz_jest_podobny = 'Milka' ORDER BY podobienstwo limit 1;
+
+> Milka, 0.9
+-- sprawdzamy czy jest wystarczająco dużo Milki w magazynie
+SELECT id, ilosc_pozostalych FROM slodycz_w_magazynie WHERE nazwa = 'Milka';
+> 20 -- liczba Milek w magazynie
+-- dodajemy do zamówienia dwie milki i zmniejszamy stan w magazynie
+INSERT INTO slodycz_w_paczce (1, 'Milka', 2);
+UPDATE slodycz_w_magazynie SET ilosc_pozostalych = ilosc_pozostalych - 2 WHERE nazwa = 'Milka';
+-- przechodzimy do kolejnej pozycji w liście
+....
+COMMIT; -- czasem ROLLBACK
+-- przechodzimy do kolejnego listu do Mikołaja
