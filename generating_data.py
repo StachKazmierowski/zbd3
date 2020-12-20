@@ -36,8 +36,9 @@ def gen_sweets(SWEETS):
 def gen_paczki(SWEETS):
     data = pd.DataFrame()
     for i in range(ELFS_NUMBER*PACZKI_PER_ELF):
-        data = data.append(pd.DataFrame([[i, random.choice(COUNTRIES), random.choice(DESCRITPIONS), SWEETS[int(i % len(SWEETS))], int(HIGH/len(SWEETS) + random.uniform(-2, 3))]]))
+        data = data.append(pd.DataFrame([[i, random.choice(COUNTRIES), random.choice(DESCRITPIONS), SWEETS[int(i % len(SWEETS))], int((i % 10) * (HIGH+LOW)/5 * len(SWEETS)/(2 * ELFS_NUMBER * PACZKI_PER_ELF) + random.uniform(-2,1) + 1)]]))
     data.to_csv('./data/paczki.csv', index=False, header=False)
+
 
 
 print(gen_similarity(SWEETS))

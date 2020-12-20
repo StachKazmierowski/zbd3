@@ -1,5 +1,6 @@
 import psycopg2
 from psycopg2 import Error
+from psycopg2 import extensions
 import random
 import time
 
@@ -12,6 +13,7 @@ def singe_run():
                                       port="5432",
                                       database="stach")
         # Create a cursor to perform database operations
+        connection.set_isolation_level(extensions.ISOLATION_LEVEL_SERIALIZABLE)
         cursor = connection.cursor()
         # Print PostgreSQL details
         # Executing a SQL query
@@ -25,6 +27,7 @@ def singe_run():
         liczba = record[4]
         remove_from_tmp_paczka(paczka_pomocnicza_id, cursor)
         connection.commit()
+        connection.set_isolation_level(extensions.ISOLATION_LEVEL_DEFAULT)
         print('Paczka numer ' ,paczka_pomocnicza_id)
         print(record)
 

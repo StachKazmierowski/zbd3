@@ -70,7 +70,7 @@ def run():
     end = time.time()
     print(end-start)
     f.write('time: ' + str(end-start) + '\n')
-    f.write('udane paczki: ' + check_paczka() + '\n')
+    f.write('udane paczki: ' + str(check_paczka()) + '\n')
     f.close()
 
 run()
