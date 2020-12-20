@@ -17,7 +17,6 @@ def singe_run():
         print("PostgreSQL server information")
         print(connection.get_dsn_parameters(), "\n")
         # Executing a SQL query
-        cursor.execute("BEGIN;")
         cursor.execute("SELECT * FROM paczka_pomocnicza limit 1;")
         # Fetch result
         record = cursor.fetchone()
@@ -28,15 +27,20 @@ def singe_run():
         slodycz = record[3]
         liczba = record[4]
         remove_from_tmp_paczka(paczka_pomocnicza_id, cursor)
+        connection.commit()
 
+        cursor.execute("BEGIN;")
         SQL = "INSERT into paczka(kraj, opis_obdarowanego) values (%s, %s) RETURNING id;"
         data = (record[1], record[2])
         cursor.execute(SQL, data)
         paczka_id = cursor.fetchone()[0]
 
-        if(not check_if_is_enough(slodycz, liczba, cursor)):
+        print("test")
+        print(check_if_is_enough(slodycz, liczba, cursor))
+        if(check_if_is_enough(slodycz, liczba, cursor) < liczba):
             slodycz = ask_for_similar(slodycz, cursor)
-        if(not check_if_is_enough(slodycz, liczba, cursor)):
+        if(not check_if_is_enough(slodycz, liczba, cursor) < liczba):
+            print(slodycz)
             cursor.execute("ROLLBACK;")
         else:
             insert_into_paczka(slodycz, liczba, paczka_id, cursor)
@@ -54,6 +58,7 @@ def singe_run():
 def remove_from_tmp_paczka(paczka_pomocnicza_id, cursor):
     SQL = "DELETE from paczka_pomocnicza WHERE id = %s;"
     data = (paczka_pomocnicza_id, )
+    print(SQL, data)
     cursor.execute(SQL, data)
 
 def update_slodycz_w_magazynie(name, amount, cursor):
@@ -76,7 +81,7 @@ def check_if_is_enough(name, amount, cursor):
     SQL = "SELECT ilosc_pozostalych FROM slodycz_w_magazynie WHERE nazwa=%s;"
     data = (name, )
     cursor.execute(SQL, data)
-    return (amount < cursor.fetchone()[0])
+    return cursor.fetchone()[0]
 
 def run():
     for i in range(100):
