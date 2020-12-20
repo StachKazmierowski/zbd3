@@ -7,7 +7,7 @@ OPTIONS( filename '/home/stach/ZBD/zbd3/data/sweets.csv', format 'csv');
 DROP TABLE slodycz_w_magazynie;
 CREATE TABLE slodycz_w_magazynie AS select * from slodycz_w_magazynie_csv;
 ALTER TABLE slodycz_w_magazynie ADD CONSTRAINT sprawdz_liczbe_slodyczy
-	CHECK ( ilosc_pozostalych > 0);
+	CHECK ( ilosc_pozostalych >= 0);
 
 DROP FOREIGN TABLE podobny_slodycz_csv;
 CREATE FOREIGN TABLE podobny_slodycz_csv (

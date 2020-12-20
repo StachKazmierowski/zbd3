@@ -14,13 +14,10 @@ def singe_run():
         # Create a cursor to perform database operations
         cursor = connection.cursor()
         # Print PostgreSQL details
-        print("PostgreSQL server information")
-        print(connection.get_dsn_parameters(), "\n")
         # Executing a SQL query
         cursor.execute("SELECT * FROM paczka_pomocnicza limit 1;")
         # Fetch result
         record = cursor.fetchone()
-        print(record)
         paczka_pomocnicza_id = record[0]
         kraj = record[1]
         opis = record[2]
@@ -28,24 +25,30 @@ def singe_run():
         liczba = record[4]
         remove_from_tmp_paczka(paczka_pomocnicza_id, cursor)
         connection.commit()
+        print('Paczka numer ' ,paczka_pomocnicza_id)
+        print(record)
 
-        cursor.execute("BEGIN;")
         SQL = "INSERT into paczka(kraj, opis_obdarowanego) values (%s, %s) RETURNING id;"
-        data = (record[1], record[2])
+        data = (kraj, opis)
         cursor.execute(SQL, data)
         paczka_id = cursor.fetchone()[0]
 
-        print("test")
-        print(check_if_is_enough(slodycz, liczba, cursor))
-        if(check_if_is_enough(slodycz, liczba, cursor) < liczba):
-            slodycz = ask_for_similar(slodycz, cursor)
-        if(not check_if_is_enough(slodycz, liczba, cursor) < liczba):
+        print('pozostało ', check_amount(slodycz, cursor))
+        if(check_amount(slodycz, cursor) < liczba):
+            print('zmieniamy słodycz')
             print(slodycz)
-            cursor.execute("ROLLBACK;")
+            slodycz = ask_for_similar(slodycz, cursor)
+            print(slodycz)
+
+        if(check_amount(slodycz, cursor) < liczba):
+            print('cofamy tranzakcje')
+            connection.rollback()
         else:
+            print('komitujemy tranzakcje')
             insert_into_paczka(slodycz, liczba, paczka_id, cursor)
             update_slodycz_w_magazynie(slodycz, liczba, cursor)
-            cursor.execute("COMMIT;")
+            connection.commit()
+
 
     except (Exception, Error) as error:
         print("Error ", error)
@@ -58,7 +61,6 @@ def singe_run():
 def remove_from_tmp_paczka(paczka_pomocnicza_id, cursor):
     SQL = "DELETE from paczka_pomocnicza WHERE id = %s;"
     data = (paczka_pomocnicza_id, )
-    print(SQL, data)
     cursor.execute(SQL, data)
 
 def update_slodycz_w_magazynie(name, amount, cursor):
@@ -77,16 +79,20 @@ def insert_into_paczka(name, amount, package_id, cursor):
     data = (package_id, name, amount)
     cursor.execute(SQL, data)
 
-def check_if_is_enough(name, amount, cursor):
+def check_amount(name, cursor):
     SQL = "SELECT ilosc_pozostalych FROM slodycz_w_magazynie WHERE nazwa=%s;"
     data = (name, )
     cursor.execute(SQL, data)
-    return cursor.fetchone()[0]
+    record = cursor.fetchone()
+    return record[0]
 
 def run():
-    for i in range(100):
+    # while(True):
+    for i in range(400):
         singe_run()
-        time.sleep(2)
+        time.sleep(0.1)
 
 run()
+
+
 
