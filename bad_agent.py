@@ -18,7 +18,7 @@ def single_run():
         paczka_pomocnicza_id, kraj, opis, slodycz, liczba = get_paczka()
         print('Paczka numer ' ,paczka_pomocnicza_id)
         print(paczka_pomocnicza_id, kraj, opis, slodycz, liczba)
-        connection.set_isolation_level(extensions.ISOLATION_LEVEL_AUTOCOMMIT)
+        connection.set_isolation_level(extensions.ISOLATION_LEVEL_READ_UNCOMMITTED)
         cursor = connection.cursor()
 
 
@@ -40,8 +40,8 @@ def single_run():
         else:
             print('komitujemy transkcje')
             insert_into_paczka(slodycz, liczba, paczka_id, cursor)
-            time.sleep(1)
             update_slodycz_w_magazynie(slodycz, liczba, cursor)
+            time.sleep(1)
             connection.commit()
 
     except (Exception, Error) as error:

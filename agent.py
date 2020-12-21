@@ -18,7 +18,7 @@ def single_run():
         paczka_pomocnicza_id, kraj, opis, slodycz, liczba = get_paczka()
         print('Paczka numer ' ,paczka_pomocnicza_id)
         print(paczka_pomocnicza_id, kraj, opis, slodycz, liczba)
-        connection.set_isolation_level(extensions.ISOLATION_LEVEL_AUTOCOMMIT)
+        connection.set_isolation_level(extensions.ISOLATION_LEVEL_READ_UNCOMMITTED)
         cursor = connection.cursor()
 
 

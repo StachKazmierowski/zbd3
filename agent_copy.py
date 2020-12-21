@@ -48,7 +48,6 @@ def single_run():
             print('komitujemy transkcje')
             insert_into_paczka(slodycz, liczba, paczka_id, cursor)
             update_slodycz_w_magazynie(slodycz, liczba, cursor)
-            time.sleep(1)
             connection.commit()
 
     except (Exception, Error) as error:
@@ -137,3 +136,9 @@ def run():
 run()
 # single_run()
 # print(get_paczka())
+
+
+
+
+
+

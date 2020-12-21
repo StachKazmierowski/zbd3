@@ -16,7 +16,7 @@ do
 	sed -i -e "s/ISOLATION_LEVEL_SERIALIZABLE/$value/g" ./bad_agent.py
 	sed -i -e "s/ISOLATION_LEVEL_READ_UNCOMMITTED/$value/g" ./bad_agent.py
 	psql -f prepare_database.sql
-	./run_elves.sh 
-#	sleep 1
-#	killall *.py
+	sh ./run_elves.sh 
+	sleep 500
+	killall python
 done
